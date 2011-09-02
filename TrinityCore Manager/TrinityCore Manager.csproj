@@ -1,0 +1,288 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{03AE3FFA-ED85-442B-885A-7136D7A0ABA0}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TrinityCore_Manager</RootNamespace>
+    <AssemblyName>TrinityCore Manager</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>trinitycore.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AutomaticUpdater">
+      <HintPath>..\DLLs\AutomaticUpdater.dll</HintPath>
+    </Reference>
+    <Reference Include="DevComponents.DotNetBar2, Version=9.5.0.7, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DLLs\DevComponents.DotNetBar2.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=6.2.4.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DLLs\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="SevenZipSharp">
+      <HintPath>..\DLLs\SevenZipSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AddAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddAccount.Designer.cs">
+      <DependentUpon>AddAccount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddAcctBan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddAcctBan.Designer.cs">
+      <DependentUpon>AddAcctBan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddIPBan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddIPBan.Designer.cs">
+      <DependentUpon>AddIPBan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Client.cs" />
+    <Compile Include="Constants.cs" />
+    <Compile Include="ArmorCreator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ArmorCreator.Designer.cs">
+      <DependentUpon>ArmorCreator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LootCreator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LootCreator.Designer.cs">
+      <DependentUpon>LootCreator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NPCCreator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NPCCreator.Designer.cs">
+      <DependentUpon>NPCCreator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SearchNPCID.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SearchNPCID.Designer.cs">
+      <DependentUpon>SearchNPCID.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SendMail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SendMail.Designer.cs">
+      <DependentUpon>SendMail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VendorCreator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VendorCreator.Designer.cs">
+      <DependentUpon>VendorCreator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WeaponCreator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WeaponCreator.Designer.cs">
+      <DependentUpon>WeaponCreator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DelAcctBan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DelAcctBan.Designer.cs">
+      <DependentUpon>DelAcctBan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DelIPBan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DelIPBan.Designer.cs">
+      <DependentUpon>DelIPBan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditAccount.Designer.cs">
+      <DependentUpon>EditAccount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Enums.cs" />
+    <Compile Include="ItemCreator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ItemCreator.Designer.cs">
+      <DependentUpon>ItemCreator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Logger.cs" />
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Methods.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RestoreDB.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RestoreDB.Designer.cs">
+      <DependentUpon>RestoreDB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SearchItemID.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SearchItemID.Designer.cs">
+      <DependentUpon>SearchItemID.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SQLMethods.cs" />
+    <Compile Include="UserSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserSettings.Designer.cs">
+      <DependentUpon>UserSettings.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AddAccount.resx">
+      <DependentUpon>AddAccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddAcctBan.resx">
+      <DependentUpon>AddAcctBan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddIPBan.resx">
+      <DependentUpon>AddIPBan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ArmorCreator.resx">
+      <DependentUpon>ArmorCreator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LootCreator.resx">
+      <DependentUpon>LootCreator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NPCCreator.resx">
+      <DependentUpon>NPCCreator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SearchNPCID.resx">
+      <DependentUpon>SearchNPCID.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SendMail.resx">
+      <DependentUpon>SendMail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VendorCreator.resx">
+      <DependentUpon>VendorCreator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WeaponCreator.resx">
+      <DependentUpon>WeaponCreator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DelAcctBan.resx">
+      <DependentUpon>DelAcctBan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DelIPBan.resx">
+      <DependentUpon>DelIPBan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditAccount.resx">
+      <DependentUpon>EditAccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ItemCreator.resx">
+      <DependentUpon>ItemCreator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="RestoreDB.resx">
+      <DependentUpon>RestoreDB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SearchItemID.resx">
+      <DependentUpon>SearchItemID.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserSettings.resx">
+      <DependentUpon>UserSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\trinitycorelogo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\error_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\checkmark_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\update32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\setup_icon1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\connect-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\questionmark.png" />
+    <None Include="Resources\PlusIcon32.png" />
+    <Content Include="trinitycore.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
