@@ -40,6 +40,19 @@ namespace TrinityCore_Manager
             this.serverRibbonBar = new DevComponents.DotNetBar.RibbonBar();
             this.startServerButtonItem = new DevComponents.DotNetBar.ButtonItem();
             this.stopServerButtonItem = new DevComponents.DotNetBar.ButtonItem();
+            this.ribbonPanel6 = new DevComponents.DotNetBar.RibbonPanel();
+            this.compileProgressRibonBar = new DevComponents.DotNetBar.RibbonBar();
+            this.compileCircularProgressItem = new DevComponents.DotNetBar.CircularProgressItem();
+            this.compileRibbonBar = new DevComponents.DotNetBar.RibbonBar();
+            this.platformItemContainer = new DevComponents.DotNetBar.ItemContainer();
+            this.platformLabelItem = new DevComponents.DotNetBar.LabelItem();
+            this.platformComboBoxItem = new DevComponents.DotNetBar.ComboBoxItem();
+            this.x86ComboItem = new DevComponents.Editors.ComboItem();
+            this.x64ComboItem = new DevComponents.Editors.ComboItem();
+            this.compileButtonItem = new DevComponents.DotNetBar.ButtonItem();
+            this.trunkLocationRibbonBar = new DevComponents.DotNetBar.RibbonBar();
+            this.setTrunkLocationButtonItem = new DevComponents.DotNetBar.ButtonItem();
+            this.updateTCButtonItem = new DevComponents.DotNetBar.ButtonItem();
             this.ribbonPanel8 = new DevComponents.DotNetBar.RibbonPanel();
             this.sendMessageRibbonBar = new DevComponents.DotNetBar.RibbonBar();
             this.sendMessageTypeItemContainer = new DevComponents.DotNetBar.ItemContainer();
@@ -72,19 +85,6 @@ namespace TrinityCore_Manager
             this.selCharacterItemContainer = new DevComponents.DotNetBar.ItemContainer();
             this.charactersComboBoxItem = new DevComponents.DotNetBar.ComboBoxItem();
             this.refreshCharactersButtonItem = new DevComponents.DotNetBar.ButtonItem();
-            this.ribbonPanel6 = new DevComponents.DotNetBar.RibbonPanel();
-            this.compileProgressRibonBar = new DevComponents.DotNetBar.RibbonBar();
-            this.compileCircularProgressItem = new DevComponents.DotNetBar.CircularProgressItem();
-            this.compileRibbonBar = new DevComponents.DotNetBar.RibbonBar();
-            this.platformItemContainer = new DevComponents.DotNetBar.ItemContainer();
-            this.platformLabelItem = new DevComponents.DotNetBar.LabelItem();
-            this.platformComboBoxItem = new DevComponents.DotNetBar.ComboBoxItem();
-            this.x86ComboItem = new DevComponents.Editors.ComboItem();
-            this.x64ComboItem = new DevComponents.Editors.ComboItem();
-            this.compileButtonItem = new DevComponents.DotNetBar.ButtonItem();
-            this.trunkLocationRibbonBar = new DevComponents.DotNetBar.RibbonBar();
-            this.setTrunkLocationButtonItem = new DevComponents.DotNetBar.ButtonItem();
-            this.updateTCButtonItem = new DevComponents.DotNetBar.ButtonItem();
             this.ribbonPanel5 = new DevComponents.DotNetBar.RibbonPanel();
             this.searchEntryIDRibbonBar = new DevComponents.DotNetBar.RibbonBar();
             this.searchEntryIDButtonItem = new DevComponents.DotNetBar.ButtonItem();
@@ -183,9 +183,9 @@ namespace TrinityCore_Manager
             this.clearConsoleTimer = new System.Windows.Forms.Timer(this.components);
             this.ribbonControl.SuspendLayout();
             this.serverRibbonPanel.SuspendLayout();
+            this.ribbonPanel6.SuspendLayout();
             this.ribbonPanel8.SuspendLayout();
             this.ribbonPanel2.SuspendLayout();
-            this.ribbonPanel6.SuspendLayout();
             this.ribbonPanel5.SuspendLayout();
             this.ribbonPanel7.SuspendLayout();
             this.ribbonPanel4.SuspendLayout();
@@ -214,8 +214,8 @@ namespace TrinityCore_Manager
             this.ribbonControl.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.ribbonControl.CanCustomize = false;
             this.ribbonControl.CaptionVisible = true;
-            this.ribbonControl.Controls.Add(this.ribbonPanel6);
             this.ribbonControl.Controls.Add(this.serverRibbonPanel);
+            this.ribbonControl.Controls.Add(this.ribbonPanel6);
             this.ribbonControl.Controls.Add(this.ribbonPanel8);
             this.ribbonControl.Controls.Add(this.ribbonPanel2);
             this.ribbonControl.Controls.Add(this.ribbonPanel5);
@@ -286,7 +286,6 @@ namespace TrinityCore_Manager
             this.serverRibbonPanel.StyleMouseOver.Class = "";
             this.serverRibbonPanel.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.serverRibbonPanel.TabIndex = 1;
-            this.serverRibbonPanel.Visible = false;
             // 
             // executeCommandRibbonBar
             // 
@@ -400,6 +399,206 @@ namespace TrinityCore_Manager
             this.stopServerButtonItem.SubItemsExpandWidth = 14;
             this.stopServerButtonItem.Text = "Stop Server";
             this.stopServerButtonItem.Click += new System.EventHandler(this.stopServerButtonItem_Click);
+            // 
+            // ribbonPanel6
+            // 
+            this.ribbonPanel6.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.ribbonPanel6.Controls.Add(this.compileProgressRibonBar);
+            this.ribbonPanel6.Controls.Add(this.compileRibbonBar);
+            this.ribbonPanel6.Controls.Add(this.trunkLocationRibbonBar);
+            this.ribbonPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ribbonPanel6.Location = new System.Drawing.Point(0, 53);
+            this.ribbonPanel6.Name = "ribbonPanel6";
+            this.ribbonPanel6.Padding = new System.Windows.Forms.Padding(3, 0, 3, 3);
+            this.ribbonPanel6.Size = new System.Drawing.Size(1008, 118);
+            // 
+            // 
+            // 
+            this.ribbonPanel6.Style.Class = "";
+            this.ribbonPanel6.Style.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.ribbonPanel6.StyleMouseDown.Class = "";
+            this.ribbonPanel6.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.ribbonPanel6.StyleMouseOver.Class = "";
+            this.ribbonPanel6.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.ribbonPanel6.TabIndex = 7;
+            this.ribbonPanel6.Visible = false;
+            // 
+            // compileProgressRibonBar
+            // 
+            this.compileProgressRibonBar.AutoOverflowEnabled = true;
+            // 
+            // 
+            // 
+            this.compileProgressRibonBar.BackgroundMouseOverStyle.Class = "";
+            this.compileProgressRibonBar.BackgroundMouseOverStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.compileProgressRibonBar.BackgroundStyle.Class = "";
+            this.compileProgressRibonBar.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.compileProgressRibonBar.ContainerControlProcessDialogKey = true;
+            this.compileProgressRibonBar.Dock = System.Windows.Forms.DockStyle.Left;
+            this.compileProgressRibonBar.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
+            this.compileCircularProgressItem});
+            this.compileProgressRibonBar.LicenseKey = "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
+            this.compileProgressRibonBar.Location = new System.Drawing.Point(435, 0);
+            this.compileProgressRibonBar.Name = "compileProgressRibonBar";
+            this.compileProgressRibonBar.Size = new System.Drawing.Size(94, 115);
+            this.compileProgressRibonBar.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.compileProgressRibonBar.TabIndex = 2;
+            this.compileProgressRibonBar.Text = "Progress";
+            // 
+            // 
+            // 
+            this.compileProgressRibonBar.TitleStyle.Class = "";
+            this.compileProgressRibonBar.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.compileProgressRibonBar.TitleStyleMouseOver.Class = "";
+            this.compileProgressRibonBar.TitleStyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // compileCircularProgressItem
+            // 
+            this.compileCircularProgressItem.Diameter = 80;
+            this.compileCircularProgressItem.Name = "compileCircularProgressItem";
+            this.compileCircularProgressItem.ProgressBarType = DevComponents.DotNetBar.eCircularProgressType.Donut;
+            this.compileCircularProgressItem.ProgressTextVisible = true;
+            // 
+            // compileRibbonBar
+            // 
+            this.compileRibbonBar.AutoOverflowEnabled = true;
+            // 
+            // 
+            // 
+            this.compileRibbonBar.BackgroundMouseOverStyle.Class = "";
+            this.compileRibbonBar.BackgroundMouseOverStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.compileRibbonBar.BackgroundStyle.Class = "";
+            this.compileRibbonBar.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.compileRibbonBar.ContainerControlProcessDialogKey = true;
+            this.compileRibbonBar.Dock = System.Windows.Forms.DockStyle.Left;
+            this.compileRibbonBar.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
+            this.platformItemContainer,
+            this.compileButtonItem});
+            this.compileRibbonBar.LicenseKey = "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
+            this.compileRibbonBar.Location = new System.Drawing.Point(206, 0);
+            this.compileRibbonBar.Name = "compileRibbonBar";
+            this.compileRibbonBar.Size = new System.Drawing.Size(229, 115);
+            this.compileRibbonBar.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.compileRibbonBar.TabIndex = 1;
+            this.compileRibbonBar.Text = "Compile";
+            // 
+            // 
+            // 
+            this.compileRibbonBar.TitleStyle.Class = "";
+            this.compileRibbonBar.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.compileRibbonBar.TitleStyleMouseOver.Class = "";
+            this.compileRibbonBar.TitleStyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // platformItemContainer
+            // 
+            // 
+            // 
+            // 
+            this.platformItemContainer.BackgroundStyle.Class = "";
+            this.platformItemContainer.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.platformItemContainer.LayoutOrientation = DevComponents.DotNetBar.eOrientation.Vertical;
+            this.platformItemContainer.Name = "platformItemContainer";
+            this.platformItemContainer.SubItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
+            this.platformLabelItem,
+            this.platformComboBoxItem});
+            this.platformItemContainer.VerticalItemAlignment = DevComponents.DotNetBar.eVerticalItemsAlignment.Middle;
+            // 
+            // platformLabelItem
+            // 
+            this.platformLabelItem.Name = "platformLabelItem";
+            this.platformLabelItem.Text = "Platform";
+            // 
+            // platformComboBoxItem
+            // 
+            this.platformComboBoxItem.DropDownHeight = 106;
+            this.platformComboBoxItem.Items.AddRange(new object[] {
+            this.x86ComboItem,
+            this.x64ComboItem});
+            this.platformComboBoxItem.Name = "platformComboBoxItem";
+            this.platformComboBoxItem.Text = "platformComboBoxItem";
+            // 
+            // x86ComboItem
+            // 
+            this.x86ComboItem.Text = "x86";
+            // 
+            // x64ComboItem
+            // 
+            this.x64ComboItem.Text = "x64";
+            // 
+            // compileButtonItem
+            // 
+            this.compileButtonItem.Name = "compileButtonItem";
+            this.compileButtonItem.SubItemsExpandWidth = 14;
+            this.compileButtonItem.Text = "Compile && Replace TrinityCore";
+            this.compileButtonItem.Click += new System.EventHandler(this.compileButtonItem_Click);
+            // 
+            // trunkLocationRibbonBar
+            // 
+            this.trunkLocationRibbonBar.AutoOverflowEnabled = true;
+            // 
+            // 
+            // 
+            this.trunkLocationRibbonBar.BackgroundMouseOverStyle.Class = "";
+            this.trunkLocationRibbonBar.BackgroundMouseOverStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.trunkLocationRibbonBar.BackgroundStyle.Class = "";
+            this.trunkLocationRibbonBar.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.trunkLocationRibbonBar.ContainerControlProcessDialogKey = true;
+            this.trunkLocationRibbonBar.Dock = System.Windows.Forms.DockStyle.Left;
+            this.trunkLocationRibbonBar.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
+            this.setTrunkLocationButtonItem,
+            this.updateTCButtonItem});
+            this.trunkLocationRibbonBar.LicenseKey = "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
+            this.trunkLocationRibbonBar.Location = new System.Drawing.Point(3, 0);
+            this.trunkLocationRibbonBar.Name = "trunkLocationRibbonBar";
+            this.trunkLocationRibbonBar.Size = new System.Drawing.Size(203, 115);
+            this.trunkLocationRibbonBar.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.trunkLocationRibbonBar.TabIndex = 0;
+            this.trunkLocationRibbonBar.Text = "TrinityCore";
+            // 
+            // 
+            // 
+            this.trunkLocationRibbonBar.TitleStyle.Class = "";
+            this.trunkLocationRibbonBar.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.trunkLocationRibbonBar.TitleStyleMouseOver.Class = "";
+            this.trunkLocationRibbonBar.TitleStyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // setTrunkLocationButtonItem
+            // 
+            this.setTrunkLocationButtonItem.Name = "setTrunkLocationButtonItem";
+            this.setTrunkLocationButtonItem.SubItemsExpandWidth = 14;
+            this.setTrunkLocationButtonItem.Text = "Set Trunk Location";
+            this.setTrunkLocationButtonItem.Click += new System.EventHandler(this.setTrunkLocationButtonItem_Click);
+            // 
+            // updateTCButtonItem
+            // 
+            this.updateTCButtonItem.Name = "updateTCButtonItem";
+            this.updateTCButtonItem.SubItemsExpandWidth = 14;
+            this.updateTCButtonItem.Text = "Download/Update";
+            this.updateTCButtonItem.Click += new System.EventHandler(this.updateTCButtonItem_Click);
             // 
             // ribbonPanel8
             // 
@@ -846,205 +1045,6 @@ namespace TrinityCore_Manager
             this.refreshCharactersButtonItem.Name = "refreshCharactersButtonItem";
             this.refreshCharactersButtonItem.Text = "Refresh Characters";
             this.refreshCharactersButtonItem.Click += new System.EventHandler(this.refreshCharactersButtonItem_Click);
-            // 
-            // ribbonPanel6
-            // 
-            this.ribbonPanel6.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.ribbonPanel6.Controls.Add(this.compileProgressRibonBar);
-            this.ribbonPanel6.Controls.Add(this.compileRibbonBar);
-            this.ribbonPanel6.Controls.Add(this.trunkLocationRibbonBar);
-            this.ribbonPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ribbonPanel6.Location = new System.Drawing.Point(0, 53);
-            this.ribbonPanel6.Name = "ribbonPanel6";
-            this.ribbonPanel6.Padding = new System.Windows.Forms.Padding(3, 0, 3, 3);
-            this.ribbonPanel6.Size = new System.Drawing.Size(1008, 118);
-            // 
-            // 
-            // 
-            this.ribbonPanel6.Style.Class = "";
-            this.ribbonPanel6.Style.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.ribbonPanel6.StyleMouseDown.Class = "";
-            this.ribbonPanel6.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.ribbonPanel6.StyleMouseOver.Class = "";
-            this.ribbonPanel6.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.ribbonPanel6.TabIndex = 7;
-            // 
-            // compileProgressRibonBar
-            // 
-            this.compileProgressRibonBar.AutoOverflowEnabled = true;
-            // 
-            // 
-            // 
-            this.compileProgressRibonBar.BackgroundMouseOverStyle.Class = "";
-            this.compileProgressRibonBar.BackgroundMouseOverStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.compileProgressRibonBar.BackgroundStyle.Class = "";
-            this.compileProgressRibonBar.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.compileProgressRibonBar.ContainerControlProcessDialogKey = true;
-            this.compileProgressRibonBar.Dock = System.Windows.Forms.DockStyle.Left;
-            this.compileProgressRibonBar.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
-            this.compileCircularProgressItem});
-            this.compileProgressRibonBar.LicenseKey = "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
-            this.compileProgressRibonBar.Location = new System.Drawing.Point(435, 0);
-            this.compileProgressRibonBar.Name = "compileProgressRibonBar";
-            this.compileProgressRibonBar.Size = new System.Drawing.Size(94, 115);
-            this.compileProgressRibonBar.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.compileProgressRibonBar.TabIndex = 2;
-            this.compileProgressRibonBar.Text = "Progress";
-            // 
-            // 
-            // 
-            this.compileProgressRibonBar.TitleStyle.Class = "";
-            this.compileProgressRibonBar.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.compileProgressRibonBar.TitleStyleMouseOver.Class = "";
-            this.compileProgressRibonBar.TitleStyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // compileCircularProgressItem
-            // 
-            this.compileCircularProgressItem.Diameter = 80;
-            this.compileCircularProgressItem.Name = "compileCircularProgressItem";
-            this.compileCircularProgressItem.ProgressBarType = DevComponents.DotNetBar.eCircularProgressType.Donut;
-            this.compileCircularProgressItem.ProgressTextVisible = true;
-            // 
-            // compileRibbonBar
-            // 
-            this.compileRibbonBar.AutoOverflowEnabled = true;
-            // 
-            // 
-            // 
-            this.compileRibbonBar.BackgroundMouseOverStyle.Class = "";
-            this.compileRibbonBar.BackgroundMouseOverStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.compileRibbonBar.BackgroundStyle.Class = "";
-            this.compileRibbonBar.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.compileRibbonBar.ContainerControlProcessDialogKey = true;
-            this.compileRibbonBar.Dock = System.Windows.Forms.DockStyle.Left;
-            this.compileRibbonBar.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
-            this.platformItemContainer,
-            this.compileButtonItem});
-            this.compileRibbonBar.LicenseKey = "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
-            this.compileRibbonBar.Location = new System.Drawing.Point(206, 0);
-            this.compileRibbonBar.Name = "compileRibbonBar";
-            this.compileRibbonBar.Size = new System.Drawing.Size(229, 115);
-            this.compileRibbonBar.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.compileRibbonBar.TabIndex = 1;
-            this.compileRibbonBar.Text = "Compile";
-            // 
-            // 
-            // 
-            this.compileRibbonBar.TitleStyle.Class = "";
-            this.compileRibbonBar.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.compileRibbonBar.TitleStyleMouseOver.Class = "";
-            this.compileRibbonBar.TitleStyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // platformItemContainer
-            // 
-            // 
-            // 
-            // 
-            this.platformItemContainer.BackgroundStyle.Class = "";
-            this.platformItemContainer.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.platformItemContainer.LayoutOrientation = DevComponents.DotNetBar.eOrientation.Vertical;
-            this.platformItemContainer.Name = "platformItemContainer";
-            this.platformItemContainer.SubItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
-            this.platformLabelItem,
-            this.platformComboBoxItem});
-            this.platformItemContainer.VerticalItemAlignment = DevComponents.DotNetBar.eVerticalItemsAlignment.Middle;
-            // 
-            // platformLabelItem
-            // 
-            this.platformLabelItem.Name = "platformLabelItem";
-            this.platformLabelItem.Text = "Platform";
-            // 
-            // platformComboBoxItem
-            // 
-            this.platformComboBoxItem.DropDownHeight = 106;
-            this.platformComboBoxItem.Items.AddRange(new object[] {
-            this.x86ComboItem,
-            this.x64ComboItem});
-            this.platformComboBoxItem.Name = "platformComboBoxItem";
-            this.platformComboBoxItem.Text = "platformComboBoxItem";
-            // 
-            // x86ComboItem
-            // 
-            this.x86ComboItem.Text = "x86";
-            // 
-            // x64ComboItem
-            // 
-            this.x64ComboItem.Text = "x64";
-            // 
-            // compileButtonItem
-            // 
-            this.compileButtonItem.Name = "compileButtonItem";
-            this.compileButtonItem.SubItemsExpandWidth = 14;
-            this.compileButtonItem.Text = "Compile && Replace TrinityCore";
-            this.compileButtonItem.Click += new System.EventHandler(this.compileButtonItem_Click);
-            // 
-            // trunkLocationRibbonBar
-            // 
-            this.trunkLocationRibbonBar.AutoOverflowEnabled = true;
-            // 
-            // 
-            // 
-            this.trunkLocationRibbonBar.BackgroundMouseOverStyle.Class = "";
-            this.trunkLocationRibbonBar.BackgroundMouseOverStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.trunkLocationRibbonBar.BackgroundStyle.Class = "";
-            this.trunkLocationRibbonBar.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.trunkLocationRibbonBar.ContainerControlProcessDialogKey = true;
-            this.trunkLocationRibbonBar.Dock = System.Windows.Forms.DockStyle.Left;
-            this.trunkLocationRibbonBar.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
-            this.setTrunkLocationButtonItem,
-            this.updateTCButtonItem});
-            this.trunkLocationRibbonBar.LicenseKey = "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
-            this.trunkLocationRibbonBar.Location = new System.Drawing.Point(3, 0);
-            this.trunkLocationRibbonBar.Name = "trunkLocationRibbonBar";
-            this.trunkLocationRibbonBar.Size = new System.Drawing.Size(203, 115);
-            this.trunkLocationRibbonBar.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.trunkLocationRibbonBar.TabIndex = 0;
-            this.trunkLocationRibbonBar.Text = "TrinityCore";
-            // 
-            // 
-            // 
-            this.trunkLocationRibbonBar.TitleStyle.Class = "";
-            this.trunkLocationRibbonBar.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.trunkLocationRibbonBar.TitleStyleMouseOver.Class = "";
-            this.trunkLocationRibbonBar.TitleStyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // setTrunkLocationButtonItem
-            // 
-            this.setTrunkLocationButtonItem.Name = "setTrunkLocationButtonItem";
-            this.setTrunkLocationButtonItem.SubItemsExpandWidth = 14;
-            this.setTrunkLocationButtonItem.Text = "Set Trunk Location";
-            this.setTrunkLocationButtonItem.Click += new System.EventHandler(this.setTrunkLocationButtonItem_Click);
-            // 
-            // updateTCButtonItem
-            // 
-            this.updateTCButtonItem.Name = "updateTCButtonItem";
-            this.updateTCButtonItem.SubItemsExpandWidth = 14;
-            this.updateTCButtonItem.Text = "Download/Update";
-            this.updateTCButtonItem.Click += new System.EventHandler(this.updateTCButtonItem_Click);
             // 
             // ribbonPanel5
             // 
@@ -2011,6 +2011,7 @@ namespace TrinityCore_Manager
             // 
             // mainTabItem
             // 
+            this.mainTabItem.Checked = true;
             this.mainTabItem.Name = "mainTabItem";
             this.mainTabItem.Panel = this.serverRibbonPanel;
             this.mainTabItem.Text = "Manage";
@@ -2047,7 +2048,6 @@ namespace TrinityCore_Manager
             // 
             // compileRibbonTabItem
             // 
-            this.compileRibbonTabItem.Checked = true;
             this.compileRibbonTabItem.Name = "compileRibbonTabItem";
             this.compileRibbonTabItem.Panel = this.ribbonPanel6;
             this.compileRibbonTabItem.Text = "Compile";
@@ -2093,7 +2093,7 @@ namespace TrinityCore_Manager
             this.automaticUpdater.BackColor = System.Drawing.Color.Transparent;
             this.automaticUpdater.ContainerForm = this;
             this.automaticUpdater.ForeColor = System.Drawing.Color.White;
-            this.automaticUpdater.Location = new System.Drawing.Point(988, 5);
+            this.automaticUpdater.Location = new System.Drawing.Point(1996, 5);
             this.automaticUpdater.Name = "automaticUpdater";
             this.automaticUpdater.Size = new System.Drawing.Size(16, 16);
             this.automaticUpdater.TabIndex = 0;
@@ -2323,9 +2323,9 @@ namespace TrinityCore_Manager
             this.ribbonControl.ResumeLayout(false);
             this.ribbonControl.PerformLayout();
             this.serverRibbonPanel.ResumeLayout(false);
+            this.ribbonPanel6.ResumeLayout(false);
             this.ribbonPanel8.ResumeLayout(false);
             this.ribbonPanel2.ResumeLayout(false);
-            this.ribbonPanel6.ResumeLayout(false);
             this.ribbonPanel5.ResumeLayout(false);
             this.ribbonPanel7.ResumeLayout(false);
             this.ribbonPanel4.ResumeLayout(false);

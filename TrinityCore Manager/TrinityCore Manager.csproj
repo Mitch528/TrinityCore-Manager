@@ -44,6 +44,7 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\DLLs\DevComponents.DotNetBar2.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="MySql.Data, Version=6.2.4.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\DLLs\MySql.Data.dll</HintPath>
@@ -112,6 +113,12 @@
     </Compile>
     <Compile Include="SendMail.Designer.cs">
       <DependentUpon>SendMail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Splash.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Splash.Designer.cs">
+      <DependentUpon>Splash.cs</DependentUpon>
     </Compile>
     <Compile Include="VendorCreator.cs">
       <SubType>Form</SubType>
@@ -203,6 +210,9 @@
     <EmbeddedResource Include="SendMail.resx">
       <DependentUpon>SendMail.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Splash.resx">
+      <DependentUpon>Splash.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="VendorCreator.resx">
       <DependentUpon>VendorCreator.cs</DependentUpon>
     </EmbeddedResource>
@@ -275,6 +285,7 @@
   <ItemGroup>
     <None Include="Resources\questionmark.png" />
     <None Include="Resources\PlusIcon32.png" />
+    <None Include="Resources\TrinityCore Manager.png" />
     <Content Include="trinitycore.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

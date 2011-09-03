@@ -17,9 +17,35 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
+using Microsoft.VisualBasic.ApplicationServices;
 
 namespace TrinityCore_Manager
 {
+
+    internal class App : WindowsFormsApplicationBase
+    {
+        public App()
+            : base()
+        {
+            this.IsSingleInstance = true;
+            this.ShutdownStyle = ShutdownMode.AfterMainFormCloses;
+        }
+
+        protected override void OnCreateSplashScreen()
+        {
+            base.OnCreateSplashScreen();
+
+            this.SplashScreen = new Splash();
+        }
+
+        protected override void OnCreateMainForm()
+        {
+            base.OnCreateMainForm();
+
+            this.MainForm = new MainForm();
+        }
+    }
+
     static class Program
     {
         /// <summary>
@@ -30,7 +56,11 @@ namespace TrinityCore_Manager
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MainForm());
+
+            var app = new App();
+
+            app.Run(Environment.GetCommandLineArgs());
+
         }
     }
 }

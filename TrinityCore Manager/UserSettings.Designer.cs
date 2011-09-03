@@ -93,13 +93,13 @@ namespace TrinityCore_Manager
             this.MySQLCharDBLabelX = new DevComponents.DotNetBar.LabelX();
             this.MySQLAuthDBTextBoxX = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.MySQLAuthDBLabelX = new DevComponents.DotNetBar.LabelX();
+            this.otherWizardPage = new DevComponents.DotNetBar.WizardPage();
+            this.restartAttemptsIntegerInput = new DevComponents.Editors.IntegerInput();
+            this.restartAttempsLabelX = new DevComponents.DotNetBar.LabelX();
+            this.autoRestartCheckBoxX = new DevComponents.DotNetBar.Controls.CheckBoxX();
+            this.otherSettingsLabelX = new DevComponents.DotNetBar.LabelX();
             this.finishedWizardPage = new DevComponents.DotNetBar.WizardPage();
             this.labelX1 = new DevComponents.DotNetBar.LabelX();
-            this.otherWizardPage = new DevComponents.DotNetBar.WizardPage();
-            this.otherSettingsLabelX = new DevComponents.DotNetBar.LabelX();
-            this.autoRestartCheckBoxX = new DevComponents.DotNetBar.Controls.CheckBoxX();
-            this.restartAttempsLabelX = new DevComponents.DotNetBar.LabelX();
-            this.restartAttemptsIntegerInput = new DevComponents.Editors.IntegerInput();
             this.wizard.SuspendLayout();
             this.wizardPage1.SuspendLayout();
             this.TCMTypeWizardPage.SuspendLayout();
@@ -110,9 +110,9 @@ namespace TrinityCore_Manager
             ((System.ComponentModel.ISupportInitialize)(this.MySQLIntegerInputX)).BeginInit();
             this.setupTCDBWizardPage.SuspendLayout();
             this.ExistingTCDBWizardPage.SuspendLayout();
-            this.finishedWizardPage.SuspendLayout();
             this.otherWizardPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.restartAttemptsIntegerInput)).BeginInit();
+            this.finishedWizardPage.SuspendLayout();
             this.SuspendLayout();
             // 
             // DBFolderBrowserDialog
@@ -207,9 +207,9 @@ namespace TrinityCore_Manager
             // 
             // wizardPage1
             // 
-            this.wizardPage1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.wizardPage1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.wizardPage1.BackColor = System.Drawing.Color.Transparent;
             this.wizardPage1.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.wizardPage1.Controls.Add(this.label1);
@@ -238,8 +238,8 @@ namespace TrinityCore_Manager
             // 
             // label1
             // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Tahoma", 16F);
             this.label1.Location = new System.Drawing.Point(210, 18);
@@ -250,9 +250,9 @@ namespace TrinityCore_Manager
             // 
             // label2
             // 
-            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Location = new System.Drawing.Point(210, 100);
             this.label2.Name = "label2";
@@ -272,9 +272,9 @@ namespace TrinityCore_Manager
             // 
             // TCMTypeWizardPage
             // 
-            this.TCMTypeWizardPage.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.TCMTypeWizardPage.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.TCMTypeWizardPage.AntiAlias = false;
             this.TCMTypeWizardPage.BackColor = System.Drawing.Color.Transparent;
             this.TCMTypeWizardPage.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -334,9 +334,9 @@ namespace TrinityCore_Manager
             // 
             // localWizardPage
             // 
-            this.localWizardPage.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.localWizardPage.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.localWizardPage.AntiAlias = false;
             this.localWizardPage.BackColor = System.Drawing.Color.Transparent;
             this.localWizardPage.Controls.Add(this.browseButtonX);
@@ -403,9 +403,9 @@ namespace TrinityCore_Manager
             // 
             // raWizardPage
             // 
-            this.raWizardPage.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.raWizardPage.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.raWizardPage.AntiAlias = false;
             this.raWizardPage.BackColor = System.Drawing.Color.Transparent;
             this.raWizardPage.Controls.Add(this.labelX2);
@@ -635,9 +635,9 @@ namespace TrinityCore_Manager
             // 
             // MySQLWizardPage
             // 
-            this.MySQLWizardPage.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.MySQLWizardPage.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.MySQLWizardPage.AntiAlias = false;
             this.MySQLWizardPage.BackColor = System.Drawing.Color.Transparent;
             this.MySQLWizardPage.Controls.Add(this.MySQLTestConnectionProgressBarX);
@@ -868,9 +868,9 @@ namespace TrinityCore_Manager
             // 
             // setupTCDBWizardPage
             // 
-            this.setupTCDBWizardPage.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.setupTCDBWizardPage.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.setupTCDBWizardPage.AntiAlias = false;
             this.setupTCDBWizardPage.BackColor = System.Drawing.Color.Transparent;
             this.setupTCDBWizardPage.Controls.Add(this.MySQLPercentLabelX);
@@ -939,9 +939,9 @@ namespace TrinityCore_Manager
             // 
             // ExistingTCDBWizardPage
             // 
-            this.ExistingTCDBWizardPage.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.ExistingTCDBWizardPage.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.ExistingTCDBWizardPage.AntiAlias = false;
             this.ExistingTCDBWizardPage.BackColor = System.Drawing.Color.Transparent;
             this.ExistingTCDBWizardPage.Controls.Add(this.MySQLWorldDBEXLabelX);
@@ -1091,11 +1091,102 @@ namespace TrinityCore_Manager
             this.MySQLAuthDBLabelX.TabIndex = 26;
             this.MySQLAuthDBLabelX.Text = "Auth DB";
             // 
+            // otherWizardPage
+            // 
+            this.otherWizardPage.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.otherWizardPage.AntiAlias = false;
+            this.otherWizardPage.BackColor = System.Drawing.Color.Transparent;
+            this.otherWizardPage.Controls.Add(this.restartAttemptsIntegerInput);
+            this.otherWizardPage.Controls.Add(this.restartAttempsLabelX);
+            this.otherWizardPage.Controls.Add(this.autoRestartCheckBoxX);
+            this.otherWizardPage.Controls.Add(this.otherSettingsLabelX);
+            this.otherWizardPage.Location = new System.Drawing.Point(7, 102);
+            this.otherWizardPage.Name = "otherWizardPage";
+            this.otherWizardPage.PageTitle = "Other Settings";
+            this.otherWizardPage.Size = new System.Drawing.Size(728, 377);
+            // 
+            // 
+            // 
+            this.otherWizardPage.Style.Class = "";
+            this.otherWizardPage.Style.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.otherWizardPage.StyleMouseDown.Class = "";
+            this.otherWizardPage.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.otherWizardPage.StyleMouseOver.Class = "";
+            this.otherWizardPage.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.otherWizardPage.TabIndex = 15;
+            // 
+            // restartAttemptsIntegerInput
+            // 
+            this.restartAttemptsIntegerInput.AllowEmptyState = false;
+            // 
+            // 
+            // 
+            this.restartAttemptsIntegerInput.BackgroundStyle.Class = "DateTimeInputBackground";
+            this.restartAttemptsIntegerInput.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.restartAttemptsIntegerInput.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
+            this.restartAttemptsIntegerInput.Location = new System.Drawing.Point(400, 182);
+            this.restartAttemptsIntegerInput.MinValue = 0;
+            this.restartAttemptsIntegerInput.Name = "restartAttemptsIntegerInput";
+            this.restartAttemptsIntegerInput.ShowUpDown = true;
+            this.restartAttemptsIntegerInput.Size = new System.Drawing.Size(52, 20);
+            this.restartAttemptsIntegerInput.TabIndex = 28;
+            // 
+            // restartAttempsLabelX
+            // 
+            // 
+            // 
+            // 
+            this.restartAttempsLabelX.BackgroundStyle.Class = "";
+            this.restartAttempsLabelX.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.restartAttempsLabelX.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.restartAttempsLabelX.Location = new System.Drawing.Point(178, 179);
+            this.restartAttempsLabelX.Name = "restartAttempsLabelX";
+            this.restartAttempsLabelX.Size = new System.Drawing.Size(215, 23);
+            this.restartAttempsLabelX.TabIndex = 27;
+            this.restartAttempsLabelX.Text = "Restart Attempts (0 = Unlimited)";
+            // 
+            // autoRestartCheckBoxX
+            // 
+            // 
+            // 
+            // 
+            this.autoRestartCheckBoxX.BackgroundStyle.Class = "";
+            this.autoRestartCheckBoxX.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.autoRestartCheckBoxX.Location = new System.Drawing.Point(281, 125);
+            this.autoRestartCheckBoxX.Name = "autoRestartCheckBoxX";
+            this.autoRestartCheckBoxX.Size = new System.Drawing.Size(132, 23);
+            this.autoRestartCheckBoxX.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.autoRestartCheckBoxX.TabIndex = 10;
+            this.autoRestartCheckBoxX.Text = "Auto Restart Server";
+            // 
+            // otherSettingsLabelX
+            // 
+            // 
+            // 
+            // 
+            this.otherSettingsLabelX.BackgroundStyle.Class = "";
+            this.otherSettingsLabelX.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.otherSettingsLabelX.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.otherSettingsLabelX.Location = new System.Drawing.Point(306, 35);
+            this.otherSettingsLabelX.Name = "otherSettingsLabelX";
+            this.otherSettingsLabelX.Size = new System.Drawing.Size(87, 24);
+            this.otherSettingsLabelX.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.otherSettingsLabelX.TabIndex = 9;
+            this.otherSettingsLabelX.Text = "Other Settings";
+            // 
             // finishedWizardPage
             // 
-            this.finishedWizardPage.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.finishedWizardPage.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.finishedWizardPage.AntiAlias = false;
             this.finishedWizardPage.BackColor = System.Drawing.Color.Transparent;
             this.finishedWizardPage.Controls.Add(this.labelX1);
@@ -1133,99 +1224,8 @@ namespace TrinityCore_Manager
             this.labelX1.Size = new System.Drawing.Size(644, 135);
             this.labelX1.TabIndex = 0;
             this.labelX1.Text = "                            Congratulations! \r\nYou have finished setting up Trini" +
-                "tyCore Manager.";
+    "tyCore Manager.";
             this.labelX1.WordWrap = true;
-            // 
-            // otherWizardPage
-            // 
-            this.otherWizardPage.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
-            this.otherWizardPage.AntiAlias = false;
-            this.otherWizardPage.BackColor = System.Drawing.Color.Transparent;
-            this.otherWizardPage.Controls.Add(this.restartAttemptsIntegerInput);
-            this.otherWizardPage.Controls.Add(this.restartAttempsLabelX);
-            this.otherWizardPage.Controls.Add(this.autoRestartCheckBoxX);
-            this.otherWizardPage.Controls.Add(this.otherSettingsLabelX);
-            this.otherWizardPage.Location = new System.Drawing.Point(7, 102);
-            this.otherWizardPage.Name = "otherWizardPage";
-            this.otherWizardPage.PageTitle = "Other Settings";
-            this.otherWizardPage.Size = new System.Drawing.Size(728, 377);
-            // 
-            // 
-            // 
-            this.otherWizardPage.Style.Class = "";
-            this.otherWizardPage.Style.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.otherWizardPage.StyleMouseDown.Class = "";
-            this.otherWizardPage.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.otherWizardPage.StyleMouseOver.Class = "";
-            this.otherWizardPage.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.otherWizardPage.TabIndex = 15;
-            // 
-            // otherSettingsLabelX
-            // 
-            // 
-            // 
-            // 
-            this.otherSettingsLabelX.BackgroundStyle.Class = "";
-            this.otherSettingsLabelX.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.otherSettingsLabelX.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.otherSettingsLabelX.Location = new System.Drawing.Point(306, 35);
-            this.otherSettingsLabelX.Name = "otherSettingsLabelX";
-            this.otherSettingsLabelX.Size = new System.Drawing.Size(87, 24);
-            this.otherSettingsLabelX.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.otherSettingsLabelX.TabIndex = 9;
-            this.otherSettingsLabelX.Text = "Other Settings";
-            // 
-            // autoRestartCheckBoxX
-            // 
-            // 
-            // 
-            // 
-            this.autoRestartCheckBoxX.BackgroundStyle.Class = "";
-            this.autoRestartCheckBoxX.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.autoRestartCheckBoxX.Location = new System.Drawing.Point(281, 125);
-            this.autoRestartCheckBoxX.Name = "autoRestartCheckBoxX";
-            this.autoRestartCheckBoxX.Size = new System.Drawing.Size(132, 23);
-            this.autoRestartCheckBoxX.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.autoRestartCheckBoxX.TabIndex = 10;
-            this.autoRestartCheckBoxX.Text = "Auto Restart Server";
-            // 
-            // restartAttempsLabelX
-            // 
-            // 
-            // 
-            // 
-            this.restartAttempsLabelX.BackgroundStyle.Class = "";
-            this.restartAttempsLabelX.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.restartAttempsLabelX.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.restartAttempsLabelX.Location = new System.Drawing.Point(178, 179);
-            this.restartAttempsLabelX.Name = "restartAttempsLabelX";
-            this.restartAttempsLabelX.Size = new System.Drawing.Size(215, 23);
-            this.restartAttempsLabelX.TabIndex = 27;
-            this.restartAttempsLabelX.Text = "Restart Attempts (0 = Unlimited)";
-            // 
-            // restartAttemptsIntegerInput
-            // 
-            this.restartAttemptsIntegerInput.AllowEmptyState = false;
-            // 
-            // 
-            // 
-            this.restartAttemptsIntegerInput.BackgroundStyle.Class = "DateTimeInputBackground";
-            this.restartAttemptsIntegerInput.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.restartAttemptsIntegerInput.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
-            this.restartAttemptsIntegerInput.Location = new System.Drawing.Point(400, 182);
-            this.restartAttemptsIntegerInput.MinValue = 0;
-            this.restartAttemptsIntegerInput.Name = "restartAttemptsIntegerInput";
-            this.restartAttemptsIntegerInput.ShowUpDown = true;
-            this.restartAttemptsIntegerInput.Size = new System.Drawing.Size(52, 20);
-            this.restartAttemptsIntegerInput.TabIndex = 28;
             // 
             // UserSettings
             // 
@@ -1249,9 +1249,9 @@ namespace TrinityCore_Manager
             ((System.ComponentModel.ISupportInitialize)(this.MySQLIntegerInputX)).EndInit();
             this.setupTCDBWizardPage.ResumeLayout(false);
             this.ExistingTCDBWizardPage.ResumeLayout(false);
-            this.finishedWizardPage.ResumeLayout(false);
             this.otherWizardPage.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.restartAttemptsIntegerInput)).EndInit();
+            this.finishedWizardPage.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

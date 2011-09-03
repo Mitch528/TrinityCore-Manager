@@ -96,7 +96,7 @@ namespace TrinityCore_Manager
                 client = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp); //Create New Socket
                 client.NoDelay = true;
 
-                client.BeginConnect(ipe, new AsyncCallback(BeginConnect), client); //Begin Connection
+                client.BeginConnect(ipe, BeginConnect, client); //Begin Connection
             }
             catch (SocketException ex)
             {
@@ -118,7 +118,7 @@ namespace TrinityCore_Manager
                     clientConnected(this, new EventArgs());
 
 
-                client.BeginReceive(data, 0, 2048, SocketFlags.None, new AsyncCallback(BeginReceive), client); //Start Receiving
+                client.BeginReceive(data, 0, 2048, SocketFlags.None, BeginReceive, client); //Start Receiving
             }
             catch (SocketException ex)
             {
@@ -152,7 +152,7 @@ namespace TrinityCore_Manager
             }
             catch (SocketException ex)
             {
-                Console.WriteLine(ex.Message + " " + ex.ErrorCode);
+                Console.WriteLine(String.Format("{0} {1}", ex.Message, ex.ErrorCode));
 
                 if (receiveFailed != null)
                     receiveFailed(this, new EventArgs());
@@ -186,7 +186,7 @@ namespace TrinityCore_Manager
 
                 byte[] msg = Encoding.ASCII.GetBytes(message + "\n");
 
-                client.BeginSend(msg, 0, msg.Length, SocketFlags.None, new AsyncCallback(SendData), client);
+                client.BeginSend(msg, 0, msg.Length, SocketFlags.None, SendData, client);
             }
             catch (SocketException ex)
             {
